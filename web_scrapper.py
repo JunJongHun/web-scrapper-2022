@@ -31,6 +31,7 @@ indeed_soup = BeautifulSoup(indeed_result.text,"html.parser")
 ###############################################################
 
 
+# 마지막 페이지 추출
 searchCountPages = indeed_soup.find("div",{"id":"searchCountPages"})
 last_page = str(searchCountPages.string).strip().split()[0][:2]
 last_page = int(last_page)
